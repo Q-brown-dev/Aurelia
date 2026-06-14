@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
             preloader.style.display = "none";
         }, 1000);
 
-    }, 1500 );
+    }, 1500);
 
 });
 // ============================
@@ -44,8 +44,8 @@ const navbar = document.querySelector(".navbar");
 
 menuBtn.addEventListener("click", () => {
     navbar.classList.toggle("active");
+    menuBtn.classList.toggle("active");
 });
-
 // ============================
 // SCROLL REVEAL ANIMATION
 // ============================
