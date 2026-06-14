@@ -1,0 +1,726 @@
+/* ==========================
+GOOGLE FONT RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   GLOBAL
+========================== */
+
+section {
+    padding: 100px 10%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+    transition: .4s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+/* PRELOADER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #f8f5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 1s;
+}
+
+.preloader h1 {
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 10px;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f5f0;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+    
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(248, 245, 240, .95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #222;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #222;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: .4s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ==========================
+   HAMBURGER MENU
+========================== */
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: #222;
+    transition: .4s;
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ==========================
+   HERO
+========================== */
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content span {
+    letter-spacing: 4px;
+    color: #777;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    max-width: 500px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    border-radius: 20px;
+}
+
+/* ==========================
+   COLLECTIONS
+========================== */
+
+.collections h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.collection-card img {
+    height: 500px;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.collection-card:hover img {
+    transform: scale(1.1);
+}
+
+.collection-card h3 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 2rem;
+}
+
+/* ==========================
+   STORY
+========================== */
+
+.story {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.story-image,
+.story-content {
+    flex: 1;
+}
+
+.story-image img {
+    border-radius: 20px;
+}
+
+.story-content span {
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.story-content h2 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.story-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ==========================
+   PRODUCTS
+========================== */
+
+.arrivals h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.product h3 {
+    padding: 20px 20px 10px;
+}
+
+.product p {
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+/* ==========================
+   NEWSLETTER
+========================== */
+
+.newsletter {
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 3rem;
+}
+
+.newsletter p {
+    color: #666;
+    margin: 20px 0;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newsletter input {
+    width: 350px;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 15px 30px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.footer-logo {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-links {
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+}
+
+.copyright {
+    opacity: .7;
+}
+
+
+
+/* ==========================
+   PAGE HERO
+========================== */
+
+.page-hero {
+    padding: 150px 10% 60px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-hero p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ==========================
+   PAGE HERO
+========================== */
+
+.page-hero {
+    padding: 150px 10% 50px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-hero p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ==========================
+   FILTER BAR
+========================== */
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter:hover {
+    background: #222;
+    color: white;
+}
+
+
+/* ==========================
+   PAGE HERO
+========================== */
+
+.page-hero {
+    padding: 150px 10% 50px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-hero p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ==========================
+FILTER BAR
+========================== */
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+}
+
+.filter {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter:hover {
+    background: #222;
+    color: white;
+}
+
+/* ==========================
+SHOP GRID
+========================== */
+
+.shop {
+    padding: 50px 10%;
+}
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.shop-card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    transition: .4s;
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+}
+
+.shop-card img {
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.shop-card h3 {
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.shop-card button {
+    padding: 10px 20px;
+    border: none;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* ==========================
+   CONTACT HERO
+========================== */
+
+.contact-hero {
+    text-align: center;
+    padding: 150px 10% 50px;
+}
+
+.contact-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-hero p {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ==========================
+   CONTACT LAYOUT
+========================== */
+
+.contact-section {
+    padding: 60px 10%;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+}
+
+/* FORM */
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: Poppins;
+}
+
+.contact-form button {
+    padding: 15px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* INFO */
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #222;
+    text-decoration: underline;
+}
+
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:991px) {
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .story {
+        flex-direction: column;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:768px) {
+
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+        transition: 0.5s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1500;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+    .navbar a {
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+    }
+}
