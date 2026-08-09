@@ -82,7 +82,7 @@ body {
 /* ==========================
    HEADER
 ========================== */
-    
+
 .header {
     width: 100%;
     display: flex;
@@ -641,24 +641,25 @@ SHOP GRID
 \*-----------------------------------*/
 
 #backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 12px 15px;
-  font-size: 18px;
-  border: none;
-  border-radius: 50%;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  display: none;
-  transition: all 0.3s ease;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
 }
 
 #backToTop:hover {
-  background-color: #555;
-  transform: scale(1.1);
+    background-color: #555;
+    transform: scale(1.1);
 }
+
 /* ==========================
 RESPONSIVE
 ========================== */
@@ -726,7 +727,7 @@ RESPONSIVE
         height: 100vh;
         background: white;
         flex-direction: column;
-        align-items:center ;
+        align-items: center;
         justify-content: center;
         gap: 30px;
         padding: 40px;
@@ -738,6 +739,7 @@ RESPONSIVE
     .navbar.active {
         right: 0;
     }
+
     .navbar a {
         font-size: 1.1rem;
     }
